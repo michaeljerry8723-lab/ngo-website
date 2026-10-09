@@ -18,3 +18,20 @@ navigation.querySelectorAll('a').forEach((link) => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reducedMotion && 'IntersectionObserver' in window) {
+  const revealItems = document.querySelectorAll('.intro-grid, .focus-strip, .programme-card, .approach-steps article, .contact-inner');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
+  revealItems.forEach((item) => {
+    item.classList.add('scroll-reveal');
+    revealObserver.observe(item);
+  });
+}
