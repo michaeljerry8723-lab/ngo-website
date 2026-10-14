@@ -148,3 +148,71 @@ body{font-size:15px;line-height:1.75;color:var(--ink)}
  .contact-inner>div:first-child>p{font-size:11px}
  .footer-links{font-size:9px}
 }
+
+
+/* Mobile readability: comfortable type sizes, strong contrast and room to breathe. */
+body{font-size:16px;color:#253a31}
+.intro-copy,.hero-intro,.approach-lead>p,.contact-inner>div:first-child>p{color:#4f5e54}
+.intro-copy{font-size:14px}
+.intro-copy .intro-lead{font-size:18px}
+.programmes-heading>p,.programme-desc,.approach-steps p{font-size:13px}
+.approach-steps h3{font-size:18px}
+.button,.hero-phone,.contact-secondary{font-size:12px}
+.footer-links{font-size:11px}
+.footer-main>p{font-size:11px}
+.footer-bottom{font-size:9px}
+@media(max-width:620px){
+ .topline{height:auto;min-height:32px;padding:6px 5%;gap:9px;font-size:8px;letter-spacing:.45px}
+ .topline span:last-child{font-size:8px;white-space:nowrap}
+ .site-nav>a{font-size:15px;padding:13px 2px}
+ .hero-index{font-size:10px;letter-spacing:1.25px}
+ .hero h1{font-size:clamp(55px,13.5vw,76px)}
+ .hero-intro{font-size:15px;line-height:1.72}
+ .hero-actions{gap:16px;flex-wrap:wrap}
+ .button{min-height:48px;font-size:12px;padding:0 15px}
+ .hero-phone{font-size:12px}
+ .hero-photo-label span{font-size:9px}
+ .hero-photo-label strong{font-size:21px}
+ .hero-side-note{font-size:8px;right:-26px}
+ .hero-bottom{align-items:flex-start;flex-direction:column;gap:7px;padding:13px 0}
+ .hero-bottom span{font-size:9px;line-height:1.5;letter-spacing:.55px}
+ .hero-bottom a{font-size:9px;letter-spacing:.8px}
+ .section-heading{flex-wrap:wrap;row-gap:6px;font-size:10px}
+ .section-heading .heading-line{display:none}
+ .section-heading .location-mark{width:100%;margin-left:0;text-align:left;font-size:9px;letter-spacing:1px}
+ .intro h2,.programmes-heading h2,.approach h2{font-size:clamp(41px,10.7vw,48px);line-height:1.02}
+ .intro-copy{font-size:14px;line-height:1.75}
+ .intro-copy .intro-lead{font-size:17px;line-height:1.6}
+ .inline-link{font-size:12px}
+ .focus-strip{row-gap:2px}
+ .focus-strip>span{font-size:9px;letter-spacing:1.2px}
+ .focus-strip div{font-size:12px;line-height:1.5}
+ .focus-strip b{font-size:10px}
+ .programmes-heading>p{font-size:14px;line-height:1.75}
+ .programme-row{min-height:112px}
+ .programme-number{font-size:10px}
+ .programme-title{font-size:25px;line-height:1.1}
+ .programme-desc{font-size:13px;line-height:1.55}
+ .approach-lead>p{font-size:14px;line-height:1.75}
+ .approach-steps h3{font-size:18px}
+ .approach-steps p{font-size:13px;line-height:1.65}
+ .step-number{font-size:12px}
+ .contact-kicker{font-size:10px;line-height:1.5}
+ .contact-band h2{font-size:clamp(44px,11vw,51px);line-height:1}
+ .contact-inner>div:first-child>p{font-size:14px;line-height:1.65}
+ .contact-secondary{font-size:13px}
+ .contact-location{font-size:9px;letter-spacing:1px}
+ .footer-brand{font-size:19px}
+ .footer-main>p{font-size:12px}
+ .footer-links{gap:12px 18px;font-size:12px}
+ .footer-bottom{font-size:9px;flex-wrap:wrap;line-height:1.5}
+}
+@media(max-width:370px){
+ .topline{align-items:flex-start}
+ .topline span:last-child{white-space:normal;text-align:right;line-height:1.35}
+ .hero h1{font-size:54px}
+ .hero-actions{gap:12px}
+ .button{gap:9px}
+ .focus-strip div{font-size:11px}
+ .programme-title{font-size:23px}
+}
