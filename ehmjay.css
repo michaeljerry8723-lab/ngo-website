@@ -216,3 +216,34 @@ body{font-size:16px;color:#253a31}
  .focus-strip div{font-size:11px}
  .programme-title{font-size:23px}
 }
+
+/* Subtle depth on the page's key moments. */
+.hero-visual{perspective:1200px;transform-style:preserve-3d}
+.hero-visual img{transform:rotateY(-1.2deg) rotateX(.5deg) translateZ(0);transform-origin:center;box-shadow:0 26px 58px #142b2324;transition:transform .65s cubic-bezier(.2,.7,.25,1),box-shadow .65s}
+.hero-visual:before,.hero-visual:after{transition:transform .65s cubic-bezier(.2,.7,.25,1)}
+.hero-photo-label{transform:perspective(700px) rotateY(4deg) rotateZ(-1deg) translateZ(28px);box-shadow:0 18px 32px #142b2330;transition:transform .45s,box-shadow .45s}
+.programme-list{perspective:1500px;transform-style:preserve-3d}
+.programme-row{position:relative;transform-style:preserve-3d;transform:translateZ(0);will-change:transform;transition:transform .3s cubic-bezier(.2,.7,.25,1),padding .25s,background .25s,box-shadow .3s}
+.programme-number,.programme-title,.programme-desc,.programme-arrow{transform:translateZ(9px)}
+.programme-arrow{box-shadow:0 3px 9px #071b1528;transition:transform .25s,background .2s,color .2s,box-shadow .25s}
+.contact-band{isolation:isolate}
+.contact-band:before{content:"";position:absolute;z-index:-1;right:-95px;top:-155px;width:410px;height:410px;border-radius:50%;border:1px solid #fff8;box-shadow:0 0 0 24px #fff3,0 0 0 50px #fff2;pointer-events:none}
+.contact-actions .button-light{transform:perspective(700px) rotateX(0) translateZ(0);box-shadow:0 7px 0 #102c25,0 15px 28px #102c2530;transition:transform .25s,box-shadow .25s,background .22s}
+@media(hover:hover) and (pointer:fine){
+ .hero-visual:hover img{transform:rotateY(0) rotateX(0) translate3d(-3px,-3px,10px);box-shadow:0 34px 65px #142b2330}
+ .hero-visual:hover:before{transform:translate3d(8px,-7px,-10px)}
+ .hero-visual:hover:after{transform:translate3d(-5px,6px,-6px)}
+ .hero-visual:hover .hero-photo-label{transform:perspective(700px) rotateY(0) rotateZ(0) translate3d(0,-4px,34px);box-shadow:0 24px 40px #142b2335}
+ .programme-row:hover{transform:translate3d(0,-3px,8px) rotateX(.6deg);box-shadow:0 12px 24px #061b1425;background:#ffffff12}
+ .programme-row:hover .programme-arrow{transform:translate3d(0,-2px,12px) rotate(6deg);box-shadow:0 9px 16px #061b1445}
+ .contact-actions .button-light:hover{transform:perspective(700px) rotateX(5deg) translateY(-3px);box-shadow:0 10px 0 #102c25,0 22px 35px #102c2540;background:#2b594a}
+}
+@media(max-width:620px){
+ .hero-visual img{transform:none;box-shadow:0 14px 28px #142b2325}
+ .hero-photo-label{transform:translateZ(0)}
+ .programme-row{will-change:auto}
+ .contact-band:before{width:260px;height:260px;right:-125px;top:-90px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-visual img,.hero-visual:before,.hero-visual:after,.hero-photo-label,.programme-row,.programme-arrow,.contact-actions .button-light{transform:none!important;box-shadow:none!important;will-change:auto!important}
+}
